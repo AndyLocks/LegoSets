@@ -1,11 +1,14 @@
+from random import randint
 from discord.ext import commands
 from discord import app_commands 
 import discord
+
 from bs4 import BeautifulSoup as bs
 import requests
 import lxml
 
 bot = commands.Bot(command_prefix = '.', intents = discord.Intents.all())
+
 
 @bot.hybrid_command(name = "set", description = "find a lego technic set")
 @app_commands.describe(set = 'id of lego tehnic set')
